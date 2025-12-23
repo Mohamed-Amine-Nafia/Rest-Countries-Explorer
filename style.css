@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+:root {
+  --background: hsl(0, 0%, 95%);
+  --secondary-background: hsl(0, 100%, 100%);
+  --color: hsl(207, 26%, 17%);
+}
+body,
+header,
+.country,
+input,
+select {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+}
+.dark-mode {
+  --background: hsl(207, 26%, 17%);
+  --secondary-background: hsl(209, 23%, 22%);
+  --color: hsl(0, 0%, 99%);
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: var(--secondary-background);
+  color: var(--color);
+}
+header span:first-child {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+header img {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.search-container {
+  width: 100%;
+  padding: 0 5rem;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.search-container div {
+  position: relative;
+  width: 45%;
+}
+.search-container div img {
+  position: absolute;
+  inset: 0.8rem;
+}
+.search-container div input {
+  width: 100%;
+  padding: 0.9rem 0.6rem 0.9rem 3rem;
+  background-color: var(--secondary-background);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: var(--color);
+}
+.search-container select {
+  height: inherit;
+  width: 15%;
+  outline: none;
+  border: none;
+  padding: 0 0.8rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--secondary-background);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color);
+}
+
+.countries {
+  width: 100%;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  padding: 5rem;
+}
+.country {
+  background-color: var(--secondary-background);
+  width: 100%;
+  border-radius: 6px;
+  min-height: 300px;
+  color: var(--color);
+  cursor: pointer;
+}
+.country div {
+  width: 100%;
+  height: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px 6px 0 0;
+}
+.country h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+}
+.country span {
+  display: block;
+  padding-left: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  header {
+    padding: 1rem 2.5rem;
+  }
+  .search-container {
+    padding: 0 2.5rem;
+  }
+  .countries {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 2.5rem;
+  }
+  .search-container div {
+    width: 55%;
+  }
+  .search-container select {
+    width: 25%;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+  .countries {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  .search-container {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .search-container div {
+    width: 75%;
+  }
+  .search-container select {
+    width: 50%;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+  .countries {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* country details styling  */
+
+.container {
+  width: 100%;
+  padding: 1rem 5rem;
+}
+.container a {
+  display: inline-block;
+  background-color: var(--secondary-background);
+  color: var(--color);
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+.container a:hover {
+  transform: scale(1.1);
+}
+.country-details {
+  width: 100%;
+  padding: 0 5rem;
+  display: flex;
+  height: 70vh;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  color: var(--color);
+}
+.country-details h3 {
+  font-size: 2rem;
+  color: var(--color);
+  font-weight: 600;
+}
+.country-details div:first-child {
+  width: 50%;
+}
+.country-details div:last-child {
+  width: 50%;
+}
+.country-details div:first-child img {
+  width: 100%;
+}
+.infos span {
+  display: block;
+  margin-top: 0.6rem;
+  white-space: nowrap;
+}
