@@ -6,6 +6,7 @@ A responsive front-end project built for the REST Countries API with color theme
 Explore countries, search, filter by region, toggle light/dark mode, and view detailed country info.
 <br />
 Live Demo : [https://rest-countries-explorer-five.vercel.app/]
+<br />
 🚀 Features
 
 List all countries with flag, name, population, region, and capital
